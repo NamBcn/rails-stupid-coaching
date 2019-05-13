@@ -1,13 +1,9 @@
 class QuestionsController < ApplicationController
-
   def ask
-
   end
 
   def answer
-    @question = params[:question]
-    @answer = params[:answer]
-
+    @question = params[:question_user]
     if @question == 'I am going to work'
       @answer = 'Great'
     elsif @question.include?('?')
@@ -17,4 +13,3 @@ class QuestionsController < ApplicationController
     end
   end
 end
-
